@@ -1,4 +1,4 @@
-python ./src/main.py
+python ./src/ssh.py
 
 du -sh *
 /usr/sbin/system_profiler SPHardwareDataType
