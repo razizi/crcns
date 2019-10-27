@@ -11,10 +11,10 @@ os.system("apt-get install -qq -o=Dpkg::Use-Pty=0 openssh-server pwgen > /dev/nu
 #Set root password
 os.system("echo root:$password | chpasswd")
 os.system("mkdir -p /var/run/sshd")
-os.system("echo "PermitRootLogin yes" >> /etc/ssh/sshd_config")
-os.system("echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config")
-os.system("echo "LD_LIBRARY_PATH=/usr/lib64-nvidia" >> /root/.bashrc")
-os.system("echo "export LD_LIBRARY_PATH" >> /root/.bashrc")
+os.system('echo "PermitRootLogin yes" >> /etc/ssh/sshd_config')
+os.system('echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config')
+os.system('echo "LD_LIBRARY_PATH=/usr/lib64-nvidia" >> /root/.bashrc')
+os.system('echo "export LD_LIBRARY_PATH" >> /root/.bashrc')
 
 #Run sshd
 get_ipython().system_raw('/usr/sbin/sshd -D &')
