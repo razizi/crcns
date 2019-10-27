@@ -29,4 +29,4 @@ get_ipython().system_raw('./ngrok authtoken $authtoken && ./ngrok tcp 22 &')
 #Print root password
 print("Root password: {}".format(password))
 #Get public address
-os.system('curl -s http://localhost:4040/api/tunnels | python -c "import sys, json; \ print(json.load(sys.stdin)['tunnels'][0]['public_url'])"')
+os.system('curl -s http://localhost:4040/api/tunnels | python -c "import sys, json;\n \print(json.load(sys.stdin)['tunnels'][0]['public_url'])"')
