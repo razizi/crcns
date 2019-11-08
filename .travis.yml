@@ -10,6 +10,7 @@ services:
 
 before_install:
 - docker pull tensorflow/tensorflow
+- docker build -t "mydocker:Dockerfile" .
 
 
 
@@ -24,5 +25,5 @@ install:
   
 # command to run tests
 script:
-  - python ./src/main.py
+  #- python ./src/main.py
   - df -h
