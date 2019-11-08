@@ -1,5 +1,5 @@
 
-os: osx
+dist: bionic
 
 language: python
 python:
