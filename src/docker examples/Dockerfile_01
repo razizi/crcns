@@ -1,0 +1,10 @@
+FROM continuumio/anaconda3:2019.07
+
+SHELL ["/bin/bash", "-l", "-c"]
+
+RUN conda install -y ...
+
+RUN pip install ...
+
+RUN echo 'exec "$@"' > /entrypoint.sh
+ENTRYPOINT ["/bin/bash", "-l", "/entrypoint.sh"]
