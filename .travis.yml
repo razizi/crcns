@@ -10,5 +10,5 @@ install:
   
 # command to run tests
 script:
-  - ./src/main.py
+  - python ./src/main.py
   - df -h
